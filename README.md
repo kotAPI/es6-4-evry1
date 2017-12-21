@@ -60,6 +60,7 @@ if(true){
 console.log(a)
 // => 2
 ```
+Pay attention to the above example, the variables a=2 and a=22 are separate variables, they might have the same name, but they're separate variables.
 
 __Best Practice__ : Avoid using same variable names throughout the program even if it's block scoped.
 
