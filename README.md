@@ -49,5 +49,18 @@ let a = 22;
 // => Uncaught SyntaxError: Identifier 'a' has already been declared
 ```
 
+## **let** lives as a unique variable in every separate block
+The **let** you declare in every block is unique to it's own block, take proper care when using them in blocks.
+
+```javascript
+let a = 2;
+if(true){
+  let a = 22;
+}
+console.log(a)
+// => 2
+```
+
+__Best Practice__ : Avoid using same variable names throughout the program even if it's block scoped.
 
 
