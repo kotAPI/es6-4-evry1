@@ -79,9 +79,33 @@ Also note that **const** needs to be defined with a value.
 
 ```javascript
 const a;
-==> Uncaught SyntaxError: Missing initializer in const declaration
+//==> Uncaught SyntaxError: Missing initializer in const declaration
 ```
+On the other hand, JavaScript __const__ objects are mutable. 
 
+```javascript
+const myObj = {
+    val:2,
+    index:1
+  }
+  myObj.val = 2
+  console.log(myObj.val)
+  // => 2
+```
+The object attributes can be changed, but the object itself cannot be reassigned to something else.
 
+```javascript
+const myObj = {
+    val:2,
+    index:1
+  }
+  var someOtherObj = {
+    garbage:"garbage-value",
+    someOtherGarbage:"Some Other Garbage Value"
+  }
+
+  myObj = someOtherObj
+  // => Uncaught TypeError: Assignment to constant variable.
+```
 
 
