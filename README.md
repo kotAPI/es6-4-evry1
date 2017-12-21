@@ -69,9 +69,9 @@ __Best Practice__ : Avoid using same variable names throughout the program even 
 
 ```javascript
  if(true){
-    const a = 22
-  }
-  console.log(a)
+  const a = 22
+}
+console.log(a)
 ```
 
 
@@ -85,12 +85,12 @@ On the other hand, JavaScript __const__ objects are mutable.
 
 ```javascript
 const myObj = {
-    val:2,
-    index:1
-  }
-  myObj.val = 2
-  console.log(myObj.val)
-  // => 2
+  val:2,
+  index:1
+}
+myObj.val = 2
+console.log(myObj.val)
+// => 2
 ```
 The object attributes can be changed, but the object itself cannot be reassigned to something else.
 
