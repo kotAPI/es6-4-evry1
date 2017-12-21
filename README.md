@@ -96,16 +96,16 @@ The object attributes can be changed, but the object itself cannot be reassigned
 
 ```javascript
 const myObj = {
-    val:2,
-    index:1
-  }
-  var someOtherObj = {
-    garbage:"garbage-value",
-    someOtherGarbage:"Some Other Garbage Value"
-  }
+  val:2,
+  index:1
+}
+var someOtherObj = {
+  garbage:"garbage-value",
+  someOtherGarbage:"Some Other Garbage Value"
+}
 
-  myObj = someOtherObj
-  // => Uncaught TypeError: Assignment to constant variable.
+myObj = someOtherObj
+// => Uncaught TypeError: Assignment to constant variable.
 ```
 
 
