@@ -64,4 +64,24 @@ Pay attention to the above example, the variables a=2 and a=22 are separate vari
 
 __Best Practice__ : Avoid using same variable names throughout the program even if it's block scoped.
 
+## **const**
+**const** is similar to let, it lives in a block scope, the main difference between **let** and **const**, you can change the value of **let**, but with **const**- you cannot change its value once declated. 
+
+```javascript
+ if(true){
+    const a = 22
+  }
+  console.log(a)
+```
+
+
+Also note that **const** needs to be defined with a value.
+
+```javascript
+const a;
+==> Uncaught SyntaxError: Missing initializer in const declaration
+```
+
+
+
 
