@@ -22,6 +22,32 @@ if(true){
 console.log(a)
 // => 2
 ```
-Be careful when using variables inside blocks, if possible try avoiding them at all costs. Restrict the usage to var to functions only. Use **_let_** or **_const_** instead.
+Be careful when using **var** inside blocks, if possible try avoiding them at all costs. Restrict the usage to var to functions only. Use **_let_** or **_const_** instead.
 
 **_let_** 
+
+Just like **var**, **let** is used to declare variables, unlike **var** it's block scoped.
+```javascript
+if(true){
+  let a=2;
+}
+console.log(a)
+// Uncaught ReferenceError: a is not defined
+```
+
+Another point to note about **let** is that, you cannot redefine a variable like you can do with **var**
+With **var**, this is totally accepted.
+
+```javascript
+var a = 2;
+var a = 22;
+```
+But with **let**, you cannot redefine a variable like **var**
+```javascript
+let a = 2;
+let a = 22;
+// => Uncaught SyntaxError: Identifier 'a' has already been declared
+```
+
+
+
