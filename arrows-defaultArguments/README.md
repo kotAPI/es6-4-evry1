@@ -37,3 +37,37 @@ const objectReturner = (name,age,place) =>({name:name, age:age, place:place})
 objectReturner("Elton John","56","New York") 
 //=> {name: "Elton John", age: "56", place: "New York"}
 ```
+
+## Scoping behaviours with arrow function
+
+ES6 arrow functions are great, but they aren't meant to be used everywhere. The reference of `this` changes when you use the arrow functions. 
+
+Better demonstrated with an example 
+```javascript
+this.foo = {a:20}
+
+var obj = {
+	foo:{a:2},
+	getter:function(){
+		console.log(this.foo)
+	}
+}
+
+obj.getter() //=> {a:2}
+```
+
+Now, rewriting the above example in ES6.
+
+```javascript
+this.foo = {a:20}
+
+var obj = {
+	foo:{a:2},
+	getter:()=>{
+		console.log(this.foo)
+	}
+}
+
+obj.getter() //=> {a:20}
+```
+`this` here takes the scope of the parent relative to the function's scope. This is both advantage and a disadvantage when using arrow functions, so proper care needs to be taken when writing code with arrow functions.
