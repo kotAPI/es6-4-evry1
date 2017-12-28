@@ -21,7 +21,7 @@ greetMe("John Oliver!") // => "Hello! John Oliver!"
 ```
 
 What if my function doesn't take arguments?
-Easy, just give an empty paranthesis `()`
+Easy, just give an empty parenthesis `()`
 
 
 ```javascript
