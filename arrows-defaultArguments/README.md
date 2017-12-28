@@ -19,3 +19,13 @@ const greetMe = (name)=>"Hello! "+name
 
 greetMe("John Oliver!") // => "Hello! John Oliver!"
 ```
+
+What if my function doesn't take arguments?
+Easy, just give an empty paranthesis `()`
+
+
+```javascript
+const greetMe = ()=>"Hello!"
+
+greetMe() // => "Hello!"
+```
