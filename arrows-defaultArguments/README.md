@@ -29,3 +29,11 @@ const greetMe = ()=>"Hello!"
 
 greetMe() // => "Hello!"
 ```
+That sounds about right, wait.. no brackets when I return? How do I return an Object in that case?
+The trick is to add parenthesis `()` around your object.
+
+```javascript
+const objectReturner = (name,age,place) =>({name:name, age:age, place:place})
+objectReturner("Elton John","56","New York") 
+//=> {name: "Elton John", age: "56", place: "New York"}
+```
