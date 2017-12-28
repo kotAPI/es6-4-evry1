@@ -71,3 +71,32 @@ var obj = {
 obj.getter() //=> {a:20}
 ```
 `this` here takes the scope of the parent relative to the function's scope. This is both advantage and a disadvantage when using arrow functions, so proper care needs to be taken when writing code with arrow functions.
+
+
+## New way to write functions that are part of objects
+
+If you remember the good old days where you used to write functions in object notations like this...
+
+```javascript 
+var obj = {
+	a:20,
+	b:20,
+	c:function(){
+		alert("I am a function!");
+	}
+}
+```
+ES6 gives you a shorthand syntax definitions for functions, you can do away with object literals and do something like this.
+```javascript 
+var obj = {
+	a:20,
+	b:20,
+	c(){
+		alert("I am a function!");
+	}
+}
+```
+
+This is a totally valid JavaScript syntax in ES6. 
+
+
