@@ -109,3 +109,16 @@ myObj = someOtherObj
 ```
 
 
+## Temporal Dead Zone
+ One of the best things about JavaScript is it's mechanism of function and variable hoisting, unfortunately it's also the worst. When you try to access a variable before assigning a value to it, the variable exists but it's value isn't defined yet. This could lead to buggy code.
+
+```javascript
+console.log(someVar) // => undefined
+var someVar = 2
+```
+You could, however, avoid this by using let and const, this breaks your code forcing you to fix it reducing the probability of buggy code.
+
+```javascript
+console.log(someOtherVar) // Uncaught ReferenceError: someOtherVar is not defined
+let someOtherVar = 2
+```
