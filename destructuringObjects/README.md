@@ -36,3 +36,14 @@ console.log(myLastName)
 // => John
 // => Wick
 ```
+
+### Declaring default variables
+Let's say your object doesn't have a variable __age__, you can assign variables some said initial values in case they are undefined.
+```javascript
+var object = {
+  first_name: "John",
+  last_name : "Wick"
+}
+
+const {first_name="John",last_name="Doe",age=27} = object
+```
