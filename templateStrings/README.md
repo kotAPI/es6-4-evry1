@@ -24,7 +24,7 @@ asdasd asdasdas asdasd
 ```
 
 This makes injecting HTML into the DOM with JavaScript a lot easier than it was.
-```
+```javascript
 var person = {
     name : "Keanu Reeves",
     type: "Actor",
