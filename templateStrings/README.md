@@ -22,3 +22,28 @@ asdasdads
 asdasd asdasdas asdasd
 `
 ```
+
+This makes injecting HTML into the DOM with JavaScript a lot easier than it was.
+```
+var person = {
+    name : "Keanu Reeves",
+    type: "Actor",
+    age : "Immortal",
+    bio : "The One"
+}
+
+var markup = `
+    <div>
+        <ul>
+            <li>${person.name}</li>
+            <li>${person.type}</li>
+            <li>${person.age}</li>
+            <li>${person.bio}</li>
+        </ul>
+    </div>
+`
+document.querySelector("body").innerHTML = markup
+```
+
+It is a great improvement over appending string with markup across many lines. Note that, you'd also be storing the indent spaces as a part of the string too!
+
