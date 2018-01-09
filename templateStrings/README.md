@@ -47,3 +47,26 @@ document.querySelector("body").innerHTML = markup
 
 It is a great improvement over appending string with markup across many lines. Note that, you'd also be storing the indent spaces as a part of the string too!
 
+
+#### Nesting template strings inside template strings
+You can nest template strings inside template strings, this gives a programmer more flexibility in writing interesting code much conveniently.
+
+
+```javascript
+var pets = ["dog","cat","wabbit","parrot","snake"]
+
+
+var markup = `
+    <ul>
+        ${pets.map(pet=>`<li>${pet}</li>`).join('')}
+    </ul>
+`
+/*
+    <ul>
+        <li>dog</li><li>cat</li><li>wabbit</li><li>parrot</li><li>snake</li>
+    </ul>
+
+*/
+
+
+```
